@@ -442,6 +442,26 @@ main .button-wrapper button:hover {
   background-color: #5025d1;
 }
 
+main .heading-wrapper {
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+main .heading-wrapper .heading-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+main .heading-wrapper .heading-subtitle {
+  margin: auto;
+}
+
+@media (min-width: 920px) {
+  main .heading-wrapper .heading-subtitle {
+    max-width: 900px;
+  }
+}
+
 main .middle-content {
   padding: 4rem 0;
 }
@@ -470,15 +490,6 @@ main .middle-content .one-col .column img {
 
 main .middle-content .plans-section {
   text-align: center;
-}
-
-main .middle-content .plans-section .plans-heading {
-  padding-bottom: 5rem;
-}
-
-main .middle-content .plans-section .plans-heading .heading-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
@@ -566,10 +577,55 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__bottom {
   text-align: center;
-  padding-top: 3rem;
+  padding: 3rem 0;
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__bottom a {
   color: #673de6;
   font-weight: 700;
+}
+
+main .middle-content .builder-section {
+  padding-bottom: 4rem;
+}
+
+main .middle-content .builder-section .builder-section__nav {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+main .middle-content .builder-section .builder-section__nav ul {
+  border-bottom: 1px solid #ccc;
+}
+
+main .middle-content .builder-section .builder-section__nav ul li {
+  padding: 0 0rem 1rem;
+  display: inline-block;
+}
+
+main .middle-content .builder-section .builder-section__nav ul li a {
+  color: #2f1c6a;
+  text-decoration: none;
+  padding-bottom: 0.9rem;
+  font-weight: 600;
+  padding: 0 1rem 0.9rem;
+}
+
+main .middle-content .builder-section .builder-section__nav ul li a:hover {
+  color: #673de6;
+  border-bottom: 2px solid #673de6;
+}
+
+main .middle-content .grid-images-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 920px) {
+  main .middle-content .grid-images-section {
+    grid-template-columns: 3fr 3fr 1fr 3fr;
+    grid-template-rows: 40px 4em 40px;
+  }
 }

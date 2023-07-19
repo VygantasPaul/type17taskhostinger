@@ -199,7 +199,7 @@
               </div>
             </section>
             <section class="plans-section">
-              <div class="plans-heading">
+              <div class="heading-wrapper">
                 <h2 class="heading-title">Vienas planas jūsų internetinės sėkmės link</h2>
                 <p>Rinkitės patraukliausią pasiūlymą su 30 dienų pinigų grąžinimo garantija.</p>
               </div>
@@ -278,24 +278,54 @@
                   <a href="#">Mokejimo salygos</a>
                 </div>
               </section>
+              
+              <section class="builder-section">
+                <div class="heading-wrapper">
+                  <h2 class="heading-title">Vienas svetainių kūrimo įrankis bet kokiam projektui</h2>
+                  <div class="heading-subtitle">
+                    <p>Siūlome mūsų dizainerių kurtus svetainių šablonus. Funkcionalūs ir naujausiomis dizaino tendencijomis pasižymintys šablonai tiks įvairaus pobūdžio svetainėms. Tiesiog atlikite norimų pakeitimų ir publikuokite svetainę.</p>
+                  </div>
+                </div> 
+                <nav class="builder-section__nav">
+                  <ul>
+                    <li><a href="#">Verslui</a></li>
+                    <li><a href="#">El.parduotuve</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Tinklarastis</a></li>
+                    <li><a href="#">Kita</a></li>
+                  </ul>
+                </nav>
+              </section>
+              <section class="grid-images-section">
+                <a href="">
+                  <img src="img/presson-template-thumbnail-2x-5540d6.webp" alt="">
+                </a>
+                <a href="">
+                  <img src="img/blick-template-thumbnail-2x-ef2c97.webp" alt="">
+                </a>
+                <a href="">
+                  <img src="img/navy-template-thumbnail-2x-bb9ca5.webp" alt="">
+                </a>
+                <a href="">
+                  <img src="img/dossenbach-template-thumbnail-2x-cfc064.webp" alt="">
+                </a>
+              </section>
             </div>
           </div>
+        </main>
+        <footer>
           
-        </div>
-      </main>
-      <footer>
-        
-      </footer>
-    </div>
+        </footer>
+      </div>
+      
+    </body>
+    <script>
+      const mobile_menu = document.querySelector('.mobile-menu');
+      document.querySelector('.hamburger').addEventListener("click", respondToClick);
+      function respondToClick (event) {
+        event.preventDefault();
+        mobile_menu.classList.toggle("open");
+      }
+    </script>
+    </html>
     
-  </body>
-  <script>
-    const mobile_menu = document.querySelector('.mobile-menu');
-    document.querySelector('.hamburger').addEventListener("click", respondToClick);
-    function respondToClick (event) {
-      event.preventDefault();
-      mobile_menu.classList.toggle("open");
-    }
-  </script>
-  </html>
-  
