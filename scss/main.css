@@ -410,7 +410,7 @@ main .two-cols .right-side {
 
 @media (min-width: 1800px) {
   main .two-cols .right-side {
-    max-width: 700px;
+    max-width: 734px;
   }
 }
 
@@ -435,4 +435,65 @@ main .two-cols .right-side .right-side__wrapper {
   main .two-cols .right-side .right-side__wrapper {
     width: 900px;
   }
+}
+
+main .middle-content {
+  padding: 4rem 0;
+}
+
+main .middle-content .one-col {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 4rem;
+  padding: 5rem 0;
+}
+
+main .middle-content .one-col .column .results {
+  display: flex;
+  color: #000;
+}
+
+main .middle-content .one-col .column svg {
+  width: 179px;
+}
+
+main .middle-content .one-col .column img {
+  width: 153px;
+}
+
+main .middle-content .plans-section {
+  text-align: center;
+}
+
+main .middle-content .plans-section .plans-heading {
+  padding-bottom: 5rem;
+}
+
+main .middle-content .plans-section .plans-heading .heading-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+main .middle-content .plans-section .plans-section__wrapper {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  border: 1px solid #d5dfff;
+}
+
+@media (min-width: 920px) {
+  main .middle-content .plans-section .plans-section__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+main .middle-content .plans-section .plans-section__wrapper .section_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 3rem 2rem;
 }
