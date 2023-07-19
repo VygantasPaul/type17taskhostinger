@@ -24,6 +24,11 @@ body {
   }
 }
 
+.fa-solid.fa-check {
+  color: #0dac77;
+  padding-right: 0.4rem;
+}
+
 h2, h3, h4, h5 {
   margin: 0;
 }
@@ -113,6 +118,33 @@ header .navbar {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+header .navbar .languages {
+  display: none;
+  padding: 0 0.6rem;
+  align-items: center;
+}
+
+@media (min-width: 920px) {
+  header .navbar .languages {
+    display: flex;
+  }
+}
+
+header .navbar .languages:hover {
+  text-decoration: none;
+}
+
+header .navbar .languages img {
+  padding-left: 1rem;
+  padding-right: 0.4rem;
+  height: 1.4rem;
+}
+
+header .navbar .languages span {
+  color: #1d1e20;
+  font-weight: 600;
+}
+
 header .navbar .mobile-menu {
   position: absolute;
   top: 86px;
@@ -125,6 +157,16 @@ header .navbar .mobile-menu {
   position: fixed;
   height: 100%;
   padding: 0 1.4rem;
+  text-align: left;
+}
+
+header .navbar .mobile-menu .languages {
+  display: flex;
+  padding-left: 0;
+}
+
+header .navbar .mobile-menu .languages img {
+  padding-left: 0;
 }
 
 header .navbar .mobile-menu.open {
@@ -132,6 +174,10 @@ header .navbar .mobile-menu.open {
 }
 
 header .navbar .mobile-menu.open .navbar-nav {
+  display: block;
+}
+
+header .navbar .mobile-menu.open .navbar-nav .mobile-lang {
   display: block;
 }
 
@@ -228,33 +274,6 @@ header .navbar .navbar-inner .left_nav {
   display: flex;
 }
 
-header .navbar .navbar-inner .left_nav .languages {
-  display: none;
-  padding: 0 0.6rem;
-  align-items: center;
-}
-
-@media (min-width: 920px) {
-  header .navbar .navbar-inner .left_nav .languages {
-    display: flex;
-  }
-}
-
-header .navbar .navbar-inner .left_nav .languages:hover {
-  text-decoration: none;
-}
-
-header .navbar .navbar-inner .left_nav .languages img {
-  padding-left: 1rem;
-  padding-right: 0.4rem;
-  height: 1.4rem;
-}
-
-header .navbar .navbar-inner .left_nav .languages span {
-  color: #1d1e20;
-  font-weight: 600;
-}
-
 header .navbar .navbar-inner .navbar-brand {
   background: url(../img/Hostinger-logo.png) no-repeat left;
   height: 2.4rem;
@@ -283,7 +302,7 @@ main .two-cols {
 }
 
 main .two-cols .left-side {
-  max-width: 520px;
+  max-width: 100%;
 }
 
 main .two-cols .left-side .left-side-wrapper {
@@ -361,15 +380,9 @@ main .two-cols .right-side {
   width: 100%;
 }
 
-@media (min-width: 920px) {
-  main .two-cols .right-side {
-    max-width: 595px;
-  }
-}
-
 @media (min-width: 1800px) {
   main .two-cols .right-side {
-    max-width: 734px;
+    max-width: 778px;
   }
 }
 
@@ -379,20 +392,26 @@ main .two-cols .right-side .right-side__wrapper {
 
 @media (min-width: 920px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 750px;
+    width: 650px;
     margin: auto;
   }
 }
 
 @media (min-width: 1200px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 800px;
+    width: 650px;
+  }
+}
+
+@media (min-width: 1400px) {
+  main .two-cols .right-side .right-side__wrapper {
+    width: 670px;
   }
 }
 
 @media (min-width: 1800px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 900px;
+    width: 831px;
   }
 }
 
@@ -475,8 +494,15 @@ main .middle-content .one-col {
   padding: 5rem 0;
 }
 
+@media (min-width: 1200px) {
+  main .middle-content .one-col {
+    gap: 24rem;
+  }
+}
+
 main .middle-content .one-col .column .results {
   display: flex;
+  gap: 1rem;
   color: #000;
 }
 
@@ -494,6 +520,7 @@ main .middle-content .plans-section {
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
@@ -512,8 +539,13 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   justify-content: center;
   height: 100%;
   padding: 2rem 3rem;
-  border-right: 1px solid #d5dfff;
   font-size: 0.9rem;
+}
+
+@media (min-width: 1200px) {
+  main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column {
+    border-right: 1px solid #d5dfff;
+  }
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .price-wrapper {
@@ -623,7 +655,11 @@ main .middle-content .grid-images-section {
   gap: 2rem;
 }
 
-@media (min-width: 920px) {
+main .middle-content .grid-images-section img {
+  margin: auto;
+}
+
+@media (min-width: 1200px) {
   main .middle-content .grid-images-section {
     grid-template-columns: 3fr 3fr 1fr 3fr;
     grid-template-rows: 40px 4em 40px;

@@ -21,7 +21,10 @@ body {
   }
   
 }
-
+.fa-solid.fa-check {
+  color: rgb(13, 172, 119);
+  padding-right: 0.4rem;
+}
 h2,h3,h4,h5 {
   margin: 0;
 }
@@ -31,9 +34,7 @@ h1 {
     font-size: 1.2rem;
   }
 }
-h2 {
-  
-}
+
 .lead {
   font-size:1.3rem
 }
@@ -104,7 +105,26 @@ header {
     top: 0;
     left: 0;
     box-shadow: $nav_bar_shadow;
-    
+    .languages {
+      display: none;
+      padding: 0 0.6rem;
+      align-items: center;
+      @include for-tablet-landscape-up {
+        display: flex;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      img {
+        padding-left: 1rem;
+        padding-right: 0.4rem;
+        height: 1.4rem;
+      }
+      span {
+        color: #1d1e20;
+        font-weight: $font-md;
+      }
+    }
     .mobile-menu {
       position: absolute;
       top: 86px;
@@ -117,10 +137,21 @@ header {
       position: fixed;
       height: 100%;
       padding: 0 1.4rem;
+      text-align: left;
+      .languages {
+        display: flex;
+        padding-left: 0;
+        img {
+          padding-left: 0;
+        }
+      }
       &.open { 
         display: block;
         .navbar-nav {
           display: block;
+          .mobile-lang {
+            display: block;
+          }
           .sign-in {
             color: $button-color;
             border: 2px solid $button-color;
@@ -193,26 +224,7 @@ header {
       }
       .left_nav {
         display: flex;
-        .languages {
-          display: none;
-          padding: 0 0.6rem;
-          align-items: center;
-          @include for-tablet-landscape-up {
-            display: flex;
-          }
-          &:hover {
-            text-decoration: none;
-          }
-          img {
-            padding-left: 1rem;
-            padding-right: 0.4rem;
-            height: 1.4rem;
-          }
-          span {
-            color: #1d1e20;
-            font-weight: $font-md;
-          }
-        }
+      
       }
       .navbar-brand {
         background: url(../img/Hostinger-logo.png) no-repeat left;
@@ -245,7 +257,7 @@ main {
       grid-template-columns: repeat(2, 1fr);
     }
     .left-side {
-      max-width: 520px;
+      max-width: 100%;
       .left-side-wrapper {
         max-width: 500px;
         margin: auto;
@@ -255,6 +267,7 @@ main {
         @include for-desktop-up {  
           max-width: 500px;
         }
+     
         .left-side__heading-wrapper {
           padding-bottom: 1rem;
         }
@@ -312,27 +325,29 @@ main {
     }
     .right-side {
       width: 100%;
-      @include for-tablet-landscape-up { 
-        max-width: 595px;
-      }
+     
       @include for-desktop-up { 
         
       }
       @include for-big-desktop-up { 
-        max-width: 734px;
+        max-width: 778px;
       }
       .right-side__wrapper {
         width: 100%;
         @include for-tablet-landscape-up { 
-          width: 750px;
+          width: 650px;
           margin: auto;
         }
         @include for-desktop-up { 
-          width: 800px;
+          width: 650px;
+          
+        }
+        @include for-medium-desktop-up { 
+          width: 670px;
           
         }
         @include for-big-desktop-up { 
-          width: 900px;
+          width: 831px;
           
         }
         
@@ -402,10 +417,13 @@ main {
       margin-right: auto;
       gap: 4rem;
       padding: 5rem 0;
+      @include for-desktop-up {
+        gap: 24rem;
+      }
       .column {
         .results {
           display: flex;
-          
+          gap: 1rem;
           color: $dark;  
         }
         svg {
@@ -423,6 +441,7 @@ main {
         
         .plans-section__inner {
           display: grid;
+          grid-template-columns: 1fr;
           justify-content: space-between;
           align-items: center;
           padding: 2rem 0;
@@ -436,8 +455,11 @@ main {
             justify-content: center;
             height: 100%;
             padding: 2rem 3rem;
-            border-right: 1px solid $main-border;
+          
             font-size: 0.9rem;
+            @include for-desktop-up {
+              border-right: 1px solid $main-border;
+            }
             .price-wrapper {
               justify-content: center;
             }
@@ -541,7 +563,11 @@ main {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
-      @include for-tablet-landscape-up {
+      img {
+        margin: auto;
+      }
+
+      @include for-desktop-up {
         grid-template-columns: 3fr 3fr 1fr 3fr;
         grid-template-rows: 40px 4em 40px;
       }
