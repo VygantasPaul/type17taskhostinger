@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Hostinger - svetainiu kurimas">
+  <meta name="description" content="Hostinger svetainiu kurimas domenai">
+  <title>Task17 - Practic task</title>
+  <script src="https://kit.fontawesome.com/89937a7b06.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.min.css" / type="text/css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-inner">
+            <div class="left_nav">
+              <h1 class="logo"><a class="navbar-brand" href="#">Hostinger </a></h1>
+              <a href="#" class="languages"> 
+                <img src="img/lt.webp" alt="">
+                <span>Lietuvių</span>
+              </a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="#">Wordpress</a></li>
+              <li><a href="#">Svetainių kūrimas</a></li>
+              <li><a href="#">Hostingas <i class="fa-solid fa-angle-down"></i></a></li>
+              <li><a href="#">Domenai</a></li>
+              <li><a href="#" class="sign-in">Prisijungti</a></li>
+            </ul>
+            <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+            <div class="mobile-menu">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Wordpress</a></li>
+                <li><a href="#">Svetainių kūrimas</a></li>
+                <li><a href="#">Hostingas <i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="#">Domenai</a></li>
+                <li><a href="#" class="sign-in">Prisijungti</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+    <footer>
+      
+    </footer>
+  </div>
+  
+</body>
+<script>
+  const mobile_menu = document.querySelector('.mobile-menu');
+  document.querySelector('.hamburger').addEventListener("click", respondToClick);
+  function respondToClick (event) {
+    event.preventDefault();
+    mobile_menu.classList.toggle("open");
+  }
+</script>
+</html>
