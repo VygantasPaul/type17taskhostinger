@@ -69,6 +69,12 @@ h1 {
   }
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
 img {
   height: auto;
   display: block;
@@ -305,31 +311,8 @@ main .two-cols .left-side .left-side-wrapper .left-side__text-wrapper {
   padding-bottom: 1rem;
 }
 
-main .two-cols .left-side .left-side-wrapper .left-side__price-wrapper {
-  display: inline-flex;
-  align-items: baseline;
-}
-
-main .two-cols .left-side .left-side-wrapper .left-side__price-wrapper .price_number {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-main .two-cols .left-side .left-side-wrapper .left-side__price-wrapper .price_currency {
-  padding-left: 0.6rem;
-  font-size: 1.2rem;
-}
-
 main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper {
   padding: 1rem 0;
-}
-
-main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .free-text {
-  padding-bottom: 1rem;
-}
-
-main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .free-text p {
-  font-weight: 700;
 }
 
 main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .countdown-wrap .countdown-wrap__wrap-cards {
@@ -370,24 +353,6 @@ main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .count
   margin: 0px 8px 0;
 }
 
-main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .button-wrapper {
-  padding-bottom: 1rem;
-}
-
-main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .button-wrapper button {
-  display: inline-block;
-  justify-content: flex-start;
-  all: unset;
-  background-color: #673de6;
-  width: 100%;
-  padding: 1rem 0;
-  text-align: center;
-  color: #fff;
-  width: 320px;
-  font-weight: 600;
-  border-radius: 0.25rem;
-}
-
 main .two-cols .left-side .left-side-wrapper h2 {
   font-size: 2.375rem;
 }
@@ -399,12 +364,6 @@ main .two-cols .right-side {
 @media (min-width: 920px) {
   main .two-cols .right-side {
     max-width: 595px;
-  }
-}
-
-@media (min-width: 1200px) {
-  main .two-cols .right-side {
-    max-width: 795px;
   }
 }
 
@@ -427,7 +386,7 @@ main .two-cols .right-side .right-side__wrapper {
 
 @media (min-width: 1200px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 700px;
+    width: 800px;
   }
 }
 
@@ -435,6 +394,52 @@ main .two-cols .right-side .right-side__wrapper {
   main .two-cols .right-side .right-side__wrapper {
     width: 900px;
   }
+}
+
+main .free-text {
+  padding-bottom: 1rem;
+}
+
+main .free-text p {
+  font-weight: 700;
+}
+
+main .price-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+main .price-wrapper .price_number {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+main .price-wrapper .price_currency {
+  padding-left: 0.6rem;
+  font-size: 1.2rem;
+}
+
+main .button-wrapper {
+  padding-bottom: 1rem;
+}
+
+main .button-wrapper button {
+  display: inline-block;
+  justify-content: flex-start;
+  all: unset;
+  background-color: #673de6;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+  width: 320px;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+main .button-wrapper button:hover {
+  background-color: #5025d1;
 }
 
 main .middle-content {
@@ -476,24 +481,95 @@ main .middle-content .plans-section .plans-heading .heading-title {
   margin-bottom: 1rem;
 }
 
-main .middle-content .plans-section .plans-section__wrapper {
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
   display: grid;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 2rem 0;
   border: 1px solid #d5dfff;
 }
 
 @media (min-width: 920px) {
-  main .middle-content .plans-section .plans-section__wrapper {
+  main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-main .middle-content .plans-section .plans-section__wrapper .section_column {
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   height: 100%;
-  padding: 3rem 2rem;
+  padding: 2rem 3rem;
+  border-right: 1px solid #d5dfff;
+  font-size: 0.9rem;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .price-wrapper {
+  justify-content: center;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .free-text .lead {
+  color: #673de6;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .ordering-plan {
+  padding: 1rem 0;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .button-wrapper button {
+  max-width: 248px;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .section_column__content {
+  padding-bottom: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media (min-width: 920px) {
+  main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .section_column__content {
+    text-align: left;
+  }
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .section_column__content .font-weight-bold {
+  font-weight: 700;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column:last-child {
+  border-right: 0;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .discount_info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .discount_info .discount__price_old span {
+  text-decoration: line-through;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .discount_info .discount__badge span {
+  border-radius: 4rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ebe4ff;
+  color: #5025d1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__bottom {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+main .middle-content .plans-section .plans-section__wrapper .plans-section__bottom a {
+  color: #673de6;
+  font-weight: 700;
 }

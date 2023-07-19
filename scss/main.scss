@@ -59,6 +59,9 @@ h2 {
   @include for-desktop-up {
     max-width: 1400px;
   }
+  @include for-desktop-up {
+    max-width: 1400px;
+  }
 }
 
 // Helpers
@@ -230,6 +233,7 @@ header {
 
 main {
   padding:0 0 5rem 0;
+  
   .two-cols {
     display: grid;
     grid-template-columns: 1fr;
@@ -260,27 +264,10 @@ main {
         .left-side__text-wrapper {
           padding-bottom: 1rem;
         }
-        .left-side__price-wrapper {
-          display: inline-flex;
-          align-items: baseline;
-          
-          .price_number {
-            font-size: 3rem;
-            font-weight: $font-b;
-          }
-          .price_currency {
-            padding-left: 0.6rem;
-            font-size: 1.2rem;
-          }
-        }
+        
         .left-side__for-free-wrapper {
           padding: 1rem 0;
-          .free-text {
-            padding-bottom: 1rem;
-            p {
-              font-weight: $font-b;
-            }
-          }
+          
           .countdown-wrap {
             
             .countdown-wrap__wrap-cards {
@@ -317,22 +304,7 @@ main {
               
             }
           }
-          .button-wrapper {
-            padding-bottom: 1rem;
-            button {
-              display: inline-block;
-              justify-content: flex-start;
-              all: unset;
-              background-color: $button-color;
-              width: 100%;
-              padding: 1rem 0;
-              text-align: center;
-              color: $white-color;
-              width: 320px;
-              font-weight: $font-md;
-              border-radius: $rounded;
-            }
-          }
+          
           
         }
         h2 {
@@ -347,7 +319,7 @@ main {
         max-width: 595px;
       }
       @include for-desktop-up { 
-        max-width: 795px;
+        
       }
       @include for-big-desktop-up { 
         max-width: 734px;
@@ -359,7 +331,7 @@ main {
           margin: auto;
         }
         @include for-desktop-up { 
-          width: 700px;
+          width: 800px;
           
         }
         @include for-big-desktop-up { 
@@ -371,7 +343,45 @@ main {
     }
     
   }
-  
+  .free-text {
+    padding-bottom: 1rem;
+    p {
+      font-weight: $font-b;
+    }
+  }
+  .price-wrapper {
+    display: inline-flex;
+    align-items: baseline;
+    
+    .price_number {
+      font-size: 3rem;
+      font-weight: $font-b;
+    }
+    .price_currency {
+      padding-left: 0.6rem;
+      font-size: 1.2rem;
+    }
+  }
+  .button-wrapper {
+    padding-bottom: 1rem;
+    button {
+      display: inline-block;
+      justify-content: flex-start;
+      all: unset;
+      background-color: $button-color;
+      padding: 1rem 0;
+      text-align: center;
+      color: $white-color;
+      width: 320px;
+      font-weight: $font-md;
+      border-radius: $rounded;
+      font-size: 1.1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #5025d1;
+      }
+    }
+  }
   .middle-content {
     padding: 4rem 0;
     .one-col {
@@ -405,28 +415,94 @@ main {
         }
       }
       .plans-section__wrapper {
-        display: grid;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3rem 2rem;
-        border: 1px solid $main-border;
-        @include for-tablet-landscape-up {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        .section_column {
-       
-        
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          height: 100%;
-          padding: 3rem 2rem;
-          .section_column__content {
-           
+      
+        .plans-section__inner {
+          display: grid;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2rem 0;
+          border: 1px solid $main-border;
+          @include for-tablet-landscape-up {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          .section_column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 2rem 3rem;
+            border-right: 1px solid $main-border;
+            font-size: 0.9rem;
+            .price-wrapper {
+              justify-content: center;
+            }
+            .free-text {
+              .lead {
+                color: $button-color;
+              }
+            }
+            .ordering-plan {
+              padding: 1rem 0;
+            }
+            .button-wrapper {
+              
+              button {
+                max-width: 248px;
+              }
+            }
+            .section_column__content {
+              padding-bottom: 0.9rem;
+              display: flex;
+              justify-content: space-between;
+              @include for-tablet-landscape-up{
+                text-align: left;
+              }
+              text-align: center;
+              .font-weight-bold {
+                font-weight: $font-b;
+              }
+            }
+            &:last-child {
+              border-right: 0;
+            }
+            .discount_info {
+              display: flex;
+              justify-content: center;
+              gap: 1rem;
+              align-items: center;
+              padding: 1rem 0;
+              .discount__price_old {
+                span {
+                  text-decoration: line-through;
+                }
+              }
+              .discount__badge {
+                span {
+                  border-radius: 4rem;
+                  display: inline-block;
+                  padding: 0.5rem 1rem;
+                  background-color: $main-color-light;
+                  color: #5025d1;
+                  text-transform: uppercase;
+                  font-weight: $font-md;
+                }
+              }
+            }
+            
           }
         }
+       .plans-section__bottom {
+        text-align: center;
+        padding-top: 3rem;
+        a { 
+          color: $second_main_color;
+          font-weight: $font-b;
+        }
+      }
+       
         
       }
+     
     }
   }
 }
