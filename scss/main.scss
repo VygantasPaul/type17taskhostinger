@@ -150,6 +150,7 @@ header {
       height: 100%;
       padding: 0 1.4rem;
       text-align: left;
+     
       .languages {
         display: flex;
         padding-left: 0;
@@ -159,6 +160,9 @@ header {
       }
       &.open { 
         display: block;
+        @include for-tablet-landscape-up {
+          display: none;
+        }
         .navbar-nav {
           display: block;
           .mobile-lang {

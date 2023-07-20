@@ -184,6 +184,12 @@ header .navbar .mobile-menu.open {
   display: block;
 }
 
+@media (min-width: 920px) {
+  header .navbar .mobile-menu.open {
+    display: none;
+  }
+}
+
 header .navbar .mobile-menu.open .navbar-nav {
   display: block;
 }
