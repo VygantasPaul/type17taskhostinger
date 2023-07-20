@@ -24,29 +24,6 @@ body {
   }
 }
 
-.fa-solid.fa-check {
-  color: #0dac77;
-  padding-right: 0.4rem;
-}
-
-h2, h3, h4, h5 {
-  margin: 0;
-}
-
-h1 {
-  font-size: 1.2rem;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-}
-
-.lead {
-  font-size: 1.3rem;
-}
-
 .container, .container-fluid {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -80,6 +57,42 @@ h1 {
   }
 }
 
+h2, h3, h4, h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.fa-solid.fa-check {
+  color: #0dac77;
+  padding-right: 0.4rem;
+}
+
+.fa-regular.fa-circle-question {
+  font-size: 1rem;
+  color: #2f1c6a;
+}
+
+.lead {
+  font-size: 1.3rem;
+}
+
+.text-mutted {
+  color: #727586;
+}
+
+select {
+  outline: none;
+}
+
 img {
   height: auto;
   display: block;
@@ -104,7 +117,11 @@ a:hover {
   text-decoration: underline;
 }
 
-btn:focus {
+button {
+  all: unset;
+}
+
+button:focus {
   outline: none;
 }
 
@@ -300,28 +317,12 @@ main .two-cols {
   main .two-cols {
     text-align: left;
     grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
   }
-}
-
-main .two-cols .left-side {
-  max-width: 100%;
 }
 
 main .two-cols .left-side .left-side-wrapper {
-  max-width: 500px;
   margin: auto;
-}
-
-@media (min-width: 920px) {
-  main .two-cols .left-side .left-side-wrapper {
-    max-width: 800px;
-  }
-}
-
-@media (min-width: 1200px) {
-  main .two-cols .left-side .left-side-wrapper {
-    max-width: 500px;
-  }
 }
 
 main .two-cols .left-side .left-side-wrapper .left-side__heading-wrapper {
@@ -382,16 +383,6 @@ main .two-cols .right-side {
   width: 100%;
 }
 
-@media (min-width: 1800px) {
-  main .two-cols .right-side {
-    max-width: 778px;
-  }
-}
-
-main .two-cols .right-side .right-side__wrapper {
-  width: 100%;
-}
-
 @media (min-width: 920px) {
   main .two-cols .right-side .right-side__wrapper {
     width: 650px;
@@ -447,7 +438,6 @@ main .button-wrapper {
 main .button-wrapper button {
   display: inline-block;
   justify-content: flex-start;
-  all: unset;
   background-color: #673de6;
   padding: 1rem 0;
   text-align: center;
@@ -476,7 +466,7 @@ main .heading-wrapper {
 
 @media (min-width: 1200px) {
   main .heading-wrapper {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -558,6 +548,12 @@ main .middle-content .one-col .column img {
   margin: auto;
 }
 
+@media (min-width: 920px) {
+  main .middle-content .one-col .column img {
+    margin-left: 0;
+  }
+}
+
 main .middle-content .plans-section {
   text-align: center;
 }
@@ -583,13 +579,28 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   }
 }
 
+@media (min-width: 1200px) {
+  main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 2rem 3rem;
+  padding: 2rem;
   font-size: 0.9rem;
+}
+
+@media (min-width: 920px) {
+  main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column h2 {
+    font-size: 1.6rem;
+  }
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column:first-child {
@@ -604,12 +615,12 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column:nth-child(2) {
-  border-right: 1px solid #d5dfff;
+  border-right: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column:nth-child(2) {
-    border-right: none;
+    border-right: 1px solid #d5dfff;
   }
 }
 
@@ -621,6 +632,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .price-wrapper {
   justify-content: center;
+  font-size: 1.3rem;
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .free-text .lead {
@@ -669,7 +681,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   background-color: #ebe4ff;
   color: #5025d1;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__toogle_more {

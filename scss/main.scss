@@ -20,23 +20,9 @@ body {
   }
   
 }
-.fa-solid.fa-check {
-  color: rgb(13, 172, 119);
-  padding-right: 0.4rem;
-}
-h2,h3,h4,h5 {
-  margin: 0;
-}
-h1 {
-  font-size: 1.2rem;
-  @include  for-tablet-portrait-up  {
-    font-size: 1.2rem;
-  }
-}
 
-.lead {
-  font-size:1.3rem
-}
+
+
 .container,.container-fluid { 
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
@@ -66,6 +52,32 @@ h1 {
 
 // Helpers
 
+h2,h3,h4,h5 {
+  margin: 0;
+}
+h1 {
+  font-size: 1.2rem;
+  @include  for-tablet-portrait-up  {
+    font-size: 1.2rem;
+  }
+}
+.fa-solid.fa-check {
+  color: $green-color;
+  padding-right: 0.4rem;
+}
+.fa-regular.fa-circle-question {
+  font-size: 1rem;
+  color: $main-color;
+}
+.lead {
+  font-size:1.3rem
+}
+.text-mutted {
+  color: $mutted-color;
+}
+select {
+  outline: none;
+}
 img {
   height: auto;
   display: block;
@@ -88,8 +100,10 @@ ul {
 a:hover {
   text-decoration: underline;
 }
-
-btn:focus {
+button {
+  all: unset;
+}
+button:focus {
   outline: none;
 }
 
@@ -255,19 +269,14 @@ main {
     @include for-desktop-up {  
       text-align: left;
       grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
     }
     .left-side {
-      max-width: 100%;
+     
       .left-side-wrapper {
-        max-width: 500px;
+       
         margin: auto;
-        @include for-tablet-landscape-up {  
-          max-width: 800px;
-        }
-        @include for-desktop-up {  
-          max-width: 500px;
-        }
-        
+       
         .left-side__heading-wrapper {
           padding-bottom: 1rem;
         }
@@ -325,15 +334,9 @@ main {
     }
     .right-side {
       width: 100%;
-      
-      @include for-desktop-up { 
-        
-      }
-      @include for-big-desktop-up { 
-        max-width: 778px;
-      }
+   
       .right-side__wrapper {
-        width: 100%;
+        
         @include for-tablet-landscape-up { 
           width: 650px;
           margin: auto;
@@ -379,7 +382,6 @@ main {
     button {
       display: inline-block;
       justify-content: flex-start;
-      all: unset;
       background-color: $button-color;
       padding: 1rem 0;
       text-align: center;
@@ -401,7 +403,7 @@ main {
       padding-bottom: 3rem;
     }
     @include for-desktop-up { 
-      padding-bottom: 5rem;
+      padding-bottom: 4rem;
     }
     .heading-title {
       font-size: 1.8rem;
@@ -443,7 +445,7 @@ main {
         .results {
           display: block;
           gap: 1rem;
-          color: $dark;   
+          color: $dark-color;   
           padding-bottom: 1rem; 
           @include for-desktop-up {
             display: flex;
@@ -455,7 +457,10 @@ main {
         }
         img {
           width: 153px;
-          margin:auto
+          margin:auto;
+          @include for-tablet-landscape-up {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -477,12 +482,24 @@ main {
           @include for-tablet-landscape-up {
             grid-template-columns: repeat(3, 1fr);
           }
+          @include for-desktop-up {
+            margin-left: $spacing-unit;
+            margin-right: $spacing-unit;
+            max-width: 1200px;
+            margin: auto;
+          }
           .section_column {
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: 100%;
-            padding: 2rem 3rem;
+            padding: 2rem;
+            font-size: 0.9rem;
+            h2 {
+              @include for-tablet-landscape-up {
+                font-size: 1.6rem;
+              }
+            }
             &:first-child {
               display: none;
               @include for-tablet-landscape-up {
@@ -492,17 +509,18 @@ main {
               
             }
             &:nth-child(2) {
-              border-right: 1px solid $main-border;
-              @include for-desktop-up {
-                border-right: none;
+              border-right: 0;
+              @include for-tablet-portrait-up {
+                border-right: 1px solid $main-border;
               }
             }
-            font-size: 0.9rem;
+            
             @include for-desktop-up {
               border-right: 1px solid $main-border;
             }
             .price-wrapper {
               justify-content: center;
+              font-size: 1.3rem;
             }
             .free-text {
               .lead {
@@ -549,7 +567,7 @@ main {
                   background-color: $main-color-light;
                   color: #5025d1;
                   text-transform: uppercase;
-                  font-weight: $font-md;
+                  font-weight: $font-lg;
                 }
               }
             }
@@ -592,7 +610,7 @@ main {
       @include for-desktop-up {
         padding-bottom: 3rem;
       }
-     
+      
       .builder-section__nav {
         text-align: center;
         display: flex;
@@ -609,7 +627,7 @@ main {
           border: 1px solid $main-border;
           width: 100%;
           padding: 13px 16px;
-        
+          
           @include for-tablet-landscape-up {
             display: none;
           }
@@ -626,7 +644,7 @@ main {
               padding-bottom: 0.9rem;
               font-weight: $font-md;
               padding: 0 1rem 0.9rem;
-            
+              
               &:hover,&.active {
                 color: $second_main_color;
                 border-bottom: 2px solid $second_main_color;
