@@ -197,13 +197,14 @@ header {
             padding: 0.6rem 1.6rem;
             display: block;
             color: #1d1e20;
-            
             @include for-tablet-landscape-up {
               display: inline-block;
             }
             
             &:hover {
-              color:$main_color;
+              border-color: $second_main_color;
+              background-color: $second_main_color;
+              color:$white-color;
             }
           }
           @include for-tablet-landscape-up {   
@@ -394,11 +395,20 @@ main {
     }
   }
   .heading-wrapper { 
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     text-align: center;
+    @include for-tablet-landscape-up {
+      padding-bottom: 3rem;
+    }
+    @include for-desktop-up { 
+      padding-bottom: 5rem;
+    }
     .heading-title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.3rem;
+      @include for-tablet-landscape-up {
+        font-size: 2.5rem;
+      }
     }
     .heading-subtitle {
       margin: auto;
@@ -408,28 +418,44 @@ main {
     }
   }
   .middle-content {
-    padding: 4rem 0;
+    padding: 2rem 0; 
+    @include for-desktop-up { 
+      padding: 4rem 0; 
+    }
     .one-col {
-      display: flex;
+      text-align: center;
+      display: block;
       justify-content: center;
       margin-left: auto;
       margin-right: auto;
       gap: 4rem;
-      padding: 5rem 0;
-      @include for-desktop-up {
+      padding: 2rem 0;
+      @include for-tablet-portrait-up {
+        text-align: left;
+        padding: 3rem 0;
+        display: flex;
+      }
+      @include for-desktop-up { 
         gap: 24rem;
+        
       }
       .column {
         .results {
-          display: flex;
+          display: block;
           gap: 1rem;
-          color: $dark;  
+          color: $dark;   
+          padding-bottom: 1rem; 
+          @include for-desktop-up {
+            display: flex;
+            padding-bottom: 0rem;
+          }
         }
         svg {
           width: 179px;
         }
         img {
           width: 153px;
+          margin:auto
         }
       }
     }
@@ -445,6 +471,9 @@ main {
           align-items: center;
           padding: 2rem 0;
           border: 1px solid $main-border;
+          @include for-tablet-portrait-up {
+            grid-template-columns: 1fr 1fr;
+          }
           @include for-tablet-landscape-up {
             grid-template-columns: repeat(3, 1fr);
           }
@@ -454,7 +483,20 @@ main {
             justify-content: center;
             height: 100%;
             padding: 2rem 3rem;
-            
+            &:first-child {
+              display: none;
+              @include for-tablet-landscape-up {
+                display: flex;
+                border-right: 1px solid $main-border;
+              }
+              
+            }
+            &:nth-child(2) {
+              border-right: 1px solid $main-border;
+              @include for-desktop-up {
+                border-right: none;
+              }
+            }
             font-size: 0.9rem;
             @include for-desktop-up {
               border-right: 1px solid $main-border;
@@ -480,10 +522,7 @@ main {
               padding-bottom: 0.9rem;
               display: flex;
               justify-content: space-between;
-              @include for-tablet-landscape-up{
-                text-align: left;
-              }
-              text-align: center;
+              text-align: left;
               .font-weight-bold {
                 font-weight: $font-lg;
               }
@@ -517,9 +556,26 @@ main {
             
           }
         }
+        .plans-section__toogle_more {
+          padding: 1.2rem 0;
+          border-left: 1px solid  $main-border;
+          border-right: 1px solid  $main-border;
+          border-bottom: 1px solid $main-border;
+          @include for-tablet-landscape-up {
+            display: none;
+          }
+          a { 
+            color: $second_main_color;
+            font-weight: $font-lg;
+            
+          }
+        }
         .plans-section__bottom {
           text-align: center;
-          padding: 3rem 0;
+          padding: 2rem 0;
+          @include for-tablet-landscape-up{
+            padding: 3rem 0;
+          }
           a { 
             color: $second_main_color;
             font-weight: $font-lg;
@@ -532,11 +588,32 @@ main {
       
     }
     .builder-section   {
-      padding-bottom: 4rem;
+      padding-bottom: 2rem;
+      @include for-desktop-up {
+        padding-bottom: 3rem;
+      }
+     
       .builder-section__nav {
         text-align: center;
         display: flex;
         justify-content: center;
+        .nav-for-desktop {
+          display: none;
+          @include for-tablet-landscape-up {
+            display: block;
+          }
+        }
+        .nav-for-mobile {
+          display: block;
+          background-color: #fff;
+          border: 1px solid $main-border;
+          width: 100%;
+          padding: 13px 16px;
+        
+          @include for-tablet-landscape-up {
+            display: none;
+          }
+        }
         ul {
           border-bottom: 1px solid #ccc;
           li {
@@ -549,7 +626,8 @@ main {
               padding-bottom: 0.9rem;
               font-weight: $font-md;
               padding: 0 1rem 0.9rem;
-              &:hover {
+            
+              &:hover,&.active {
                 color: $second_main_color;
                 border-bottom: 2px solid $second_main_color;
               }
@@ -564,6 +642,15 @@ main {
       gap: 2rem;
       img {
         margin: auto;
+        max-height: 299px;
+        object-fit: cover;
+        width: 100%;
+        @include for-tablet-portrait-up {
+          max-height: 499px;
+        }
+        @include for-desktop-up {
+          max-height:auto;
+        }
       }
       
       @include for-desktop-up {
