@@ -405,7 +405,7 @@ main .two-cols .right-side .right-side__wrapper {
 
 @media (min-width: 1400px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 670px;
+    width: 785px;
   }
 }
 
@@ -664,4 +664,9 @@ main .middle-content .grid-images-section img {
     grid-template-columns: 3fr 3fr 1fr 3fr;
     grid-template-rows: 40px 4em 40px;
   }
+}
+
+footer {
+  padding: 4rem 0;
+  background-color: #ebe4ff;
 }
