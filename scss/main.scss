@@ -605,7 +605,7 @@ main {
         }
         .nav-for-mobile {
           display: block;
-          background-color: #fff;
+          background-color: $white-color;
           border: 1px solid $main-border;
           width: 100%;
           padding: 13px 16px;
@@ -615,7 +615,7 @@ main {
           }
         }
         ul {
-          border-bottom: 1px solid #ccc;
+          border-bottom: 1px solid $main-border;
           li {
             
             padding: 0 0rem 1rem;
