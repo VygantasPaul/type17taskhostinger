@@ -513,7 +513,9 @@ main {
             @include for-desktop-up {
               border-right: 0.063rem solid $main-border;
             }
-            
+            .price-wrapper {
+              justify-content: center;
+            }
             .free-text {
               .lead {
                 color: $button-color;

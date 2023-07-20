@@ -629,6 +629,10 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   }
 }
 
+main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .price-wrapper {
+  justify-content: center;
+}
+
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .free-text .lead {
   color: #673de6;
 }
