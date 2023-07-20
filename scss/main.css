@@ -321,10 +321,6 @@ main .two-cols {
   }
 }
 
-main .two-cols .left-side .left-side-wrapper {
-  margin: auto;
-}
-
 main .two-cols .left-side .left-side-wrapper .left-side__heading-wrapper {
   padding-bottom: 1rem;
 }
@@ -380,7 +376,13 @@ main .two-cols .left-side .left-side-wrapper h2 {
 }
 
 main .two-cols .right-side {
-  width: 100%;
+  padding-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+  main .two-cols .right-side {
+    padding-top: 0;
+  }
 }
 
 @media (min-width: 920px) {

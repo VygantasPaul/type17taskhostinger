@@ -272,11 +272,9 @@ main {
       gap: 5rem;
     }
     .left-side {
-     
+      
       .left-side-wrapper {
-       
-        margin: auto;
-       
+        
         .left-side__heading-wrapper {
           padding-bottom: 1rem;
         }
@@ -333,8 +331,10 @@ main {
       }
     }
     .right-side {
-      width: 100%;
-   
+      padding-top: 1rem;
+      @include for-desktop-up { 
+        padding-top: 0;
+      }
       .right-side__wrapper {
         
         @include for-tablet-landscape-up { 
