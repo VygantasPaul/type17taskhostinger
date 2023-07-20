@@ -35,25 +35,19 @@ body {
 
 @media (min-width: 1200px) {
   .container-fluid {
-    max-width: 1900px;
+    max-width: 118.75rem;
   }
 }
 
 @media (min-width: 920px) {
   .container {
-    max-width: 1400px;
+    max-width: 75rem;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1400px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1400px;
+    max-width: 87.5rem;
   }
 }
 
@@ -164,7 +158,7 @@ header .navbar .languages span {
 
 header .navbar .mobile-menu {
   position: absolute;
-  top: 86px;
+  top: 5.375rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -223,7 +217,6 @@ header .navbar .navbar-inner {
 
 @media (min-width: 920px) {
   header .navbar .navbar-inner {
-    justify-content: space-between;
     align-items: center;
   }
 }
@@ -298,7 +291,7 @@ header .navbar .navbar-inner .navbar-brand {
   background: url(../img/Hostinger-logo.png) no-repeat left;
   height: 2.4rem;
   width: 9rem;
-  text-indent: -99999px;
+  text-indent: -99999rem;
   display: inline-block;
   background-size: cover;
 }
@@ -335,13 +328,13 @@ main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper {
 }
 
 main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .countdown-wrap .countdown-wrap__wrap-cards {
-  text-align: center;
   display: flex;
+  justify-content: center;
+  text-align: center;
   border-radius: 0.25rem;
   font-size: 1.3rem;
   font-weight: 600;
   padding-bottom: 1.4rem;
-  justify-content: center;
 }
 
 @media (min-width: 1200px) {
@@ -358,13 +351,13 @@ main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .count
 }
 
 main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .countdown-wrap .countdown-wrap__wrap-cards .count_down_column .count_down {
+  display: flex;
+  justify-content: center;
   border: 1px solid #2f1c6a;
   background: #fff;
   width: 64px;
   height: 64px;
   border-radius: 0.25rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -393,21 +386,15 @@ main .two-cols .right-side {
   }
 }
 
-@media (min-width: 1200px) {
-  main .two-cols .right-side .right-side__wrapper {
-    width: 650px;
-  }
-}
-
 @media (min-width: 1400px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 785px;
+    width: 49.063rem;
   }
 }
 
 @media (min-width: 1800px) {
   main .two-cols .right-side .right-side__wrapper {
-    width: 831px;
+    width: 51.938rem;
   }
 }
 
@@ -420,8 +407,16 @@ main .free-text p {
 }
 
 main .price-wrapper {
-  display: inline-flex;
   align-items: baseline;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  main .price-wrapper {
+    justify-content: start;
+  }
 }
 
 main .price-wrapper .price_number {
@@ -445,7 +440,7 @@ main .button-wrapper button {
   padding: 1rem 0;
   text-align: center;
   color: #fff;
-  width: 320px;
+  width: 20rem;
   font-weight: 600;
   border-radius: 0.25rem;
   font-size: 1.1rem;
@@ -490,7 +485,7 @@ main .heading-wrapper .heading-subtitle {
 
 @media (min-width: 920px) {
   main .heading-wrapper .heading-subtitle {
-    max-width: 900px;
+    max-width: 56.25rem;
   }
 }
 
@@ -524,6 +519,7 @@ main .middle-content .one-col {
 
 @media (min-width: 1200px) {
   main .middle-content .one-col {
+    padding: 3rem 0 5rem;
     gap: 24rem;
   }
 }
@@ -543,11 +539,11 @@ main .middle-content .one-col .column .results {
 }
 
 main .middle-content .one-col .column svg {
-  width: 179px;
+  width: 11.188rem;
 }
 
 main .middle-content .one-col .column img {
-  width: 153px;
+  width: 9.563rem;
   margin: auto;
 }
 
@@ -567,7 +563,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
-  border: 1px solid #d5dfff;
+  border: 0.063rem solid #d5dfff;
 }
 
 @media (min-width: 768px) {
@@ -586,7 +582,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: auto;
   }
 }
@@ -596,7 +592,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   font-size: 0.9rem;
 }
 
@@ -613,7 +609,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 @media (min-width: 920px) {
   main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column:first-child {
     display: flex;
-    border-right: 1px solid #d5dfff;
+    border-right: 0.063rem solid #d5dfff;
   }
 }
 
@@ -623,19 +619,14 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 
 @media (min-width: 768px) {
   main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column:nth-child(2) {
-    border-right: 1px solid #d5dfff;
+    border-right: 0.063rem solid #d5dfff;
   }
 }
 
 @media (min-width: 1200px) {
   main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column {
-    border-right: 1px solid #d5dfff;
+    border-right: 0.063rem solid #d5dfff;
   }
-}
-
-main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .price-wrapper {
-  justify-content: center;
-  font-size: 1.3rem;
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .free-text .lead {
@@ -647,7 +638,7 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .button-wrapper button {
-  max-width: 248px;
+  max-width: 15.5rem;
 }
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .section_column__content {
@@ -689,9 +680,9 @@ main .middle-content .plans-section .plans-section__wrapper .plans-section__inne
 
 main .middle-content .plans-section .plans-section__wrapper .plans-section__toogle_more {
   padding: 1.2rem 0;
-  border-left: 1px solid #d5dfff;
-  border-right: 1px solid #d5dfff;
-  border-bottom: 1px solid #d5dfff;
+  border-left: 0.0631rem solid #d5dfff;
+  border-right: 0.0631rem solid #d5dfff;
+  border-bottom: 0.0631rem solid #d5dfff;
 }
 
 @media (min-width: 920px) {
@@ -732,9 +723,9 @@ main .middle-content .builder-section {
 }
 
 main .middle-content .builder-section .builder-section__nav {
-  text-align: center;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 main .middle-content .builder-section .builder-section__nav .nav-for-desktop {
@@ -752,7 +743,7 @@ main .middle-content .builder-section .builder-section__nav .nav-for-mobile {
   background-color: #fff;
   border: 1px solid #d5dfff;
   width: 100%;
-  padding: 13px 16px;
+  padding: 0.813rem 1rem;
 }
 
 @media (min-width: 920px) {
@@ -762,7 +753,7 @@ main .middle-content .builder-section .builder-section__nav .nav-for-mobile {
 }
 
 main .middle-content .builder-section .builder-section__nav ul {
-  border-bottom: 1px solid #d5dfff;
+  border-bottom: 0.063rem solid #d5dfff;
 }
 
 main .middle-content .builder-section .builder-section__nav ul li {
@@ -780,7 +771,7 @@ main .middle-content .builder-section .builder-section__nav ul li a {
 
 main .middle-content .builder-section .builder-section__nav ul li a:hover, main .middle-content .builder-section .builder-section__nav ul li a.active {
   color: #673de6;
-  border-bottom: 2px solid #673de6;
+  border-bottom: 0.125rem solid #673de6;
 }
 
 main .middle-content .grid-images-section {
@@ -791,14 +782,14 @@ main .middle-content .grid-images-section {
 
 main .middle-content .grid-images-section img {
   margin: auto;
-  max-height: 299px;
+  max-height: 18.688rem;
   object-fit: cover;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   main .middle-content .grid-images-section img {
-    max-height: 499px;
+    max-height: 31.188rem;
   }
 }
 
@@ -811,7 +802,6 @@ main .middle-content .grid-images-section img {
 @media (min-width: 1200px) {
   main .middle-content .grid-images-section {
     grid-template-columns: 3fr 3fr 1fr 3fr;
-    grid-template-rows: 40px 4em 40px;
   }
 }
 

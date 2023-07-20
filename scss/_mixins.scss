@@ -1,0 +1,14 @@
+@mixin for_grid_columns_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@mixin for_flex_justify_center{
+  display: flex; 
+  justify-content: center;
+}
+ 
+@mixin for-left_bottom_right_border {
+  border-left: 0.0631rem solid  $main-border;
+  border-right: 0.0631rem solid  $main-border;
+  border-bottom: 0.0631rem solid $main-border;
+}
