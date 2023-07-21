@@ -602,7 +602,6 @@ header .navbar .navbar-inner .navbar-brand {
   align-items: center;
   padding: 0;
   border: 0.063rem solid #d5dfff;
-  border-radius: 0.35rem;
 }
 
 @media (min-width: 768px) {
@@ -615,6 +614,7 @@ header .navbar .navbar-inner .navbar-brand {
 @media (min-width: 920px) {
   .wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
     grid-template-columns: repeat(3, 1fr);
+    border-radius: 0.35rem;
   }
 }
 
