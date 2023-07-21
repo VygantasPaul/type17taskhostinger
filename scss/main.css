@@ -76,7 +76,13 @@ h1 {
 }
 
 .lead {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .lead {
+    font-size: 1.3rem;
+  }
 }
 
 .text-mutted {
@@ -355,20 +361,32 @@ header .navbar .navbar-inner .navbar-brand {
 .wrap main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .countdown-wrap .countdown-wrap__wrap-cards .count_down_column .count_down {
   display: flex;
   justify-content: center;
-  border: 1px solid #2f1c6a;
+  border: 0.063rem solid #2f1c6a;
   background: #fff;
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 0.35rem;
   align-items: center;
 }
 
 .wrap main .two-cols .left-side .left-side-wrapper .left-side__for-free-wrapper .countdown-wrap .countdown-wrap__wrap-cards .count_down_column .count_divider {
-  margin: 0px 8px 0;
+  margin: 0px 0.5rem 0;
 }
 
 .wrap main .two-cols .left-side .left-side-wrapper h2 {
-  font-size: 2.375rem;
+  font-size: 1.375rem;
+}
+
+@media (min-width: 768px) {
+  .wrap main .two-cols .left-side .left-side-wrapper h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrap main .two-cols .left-side .left-side-wrapper h2 {
+    font-size: 2.375rem;
+  }
 }
 
 .wrap main .two-cols .right-side {
@@ -410,9 +428,15 @@ header .navbar .navbar-inner .navbar-brand {
 
 .wrap main .price-wrapper {
   align-items: baseline;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .wrap main .price-wrapper {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -422,8 +446,14 @@ header .navbar .navbar-inner .navbar-brand {
 }
 
 .wrap main .price-wrapper .price_number {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .wrap main .price-wrapper .price_number {
+    font-size: 3rem;
+  }
 }
 
 .wrap main .price-wrapper .price_currency {
@@ -476,6 +506,12 @@ header .navbar .navbar-inner .navbar-brand {
 }
 
 @media (min-width: 920px) {
+  .wrap main .heading-wrapper .heading-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
   .wrap main .heading-wrapper .heading-title {
     font-size: 2.5rem;
   }
@@ -564,13 +600,15 @@ header .navbar .navbar-inner .navbar-brand {
   grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 0;
   border: 0.063rem solid #d5dfff;
+  border-radius: 0.35rem;
 }
 
 @media (min-width: 768px) {
   .wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 0;
   }
 }
 
@@ -594,8 +632,12 @@ header .navbar .navbar-inner .navbar-brand {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 1.4rem;
   font-size: 0.9rem;
+}
+
+.wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column h2 {
+  font-size: 1.2rem;
 }
 
 @media (min-width: 920px) {
@@ -641,6 +683,18 @@ header .navbar .navbar-inner .navbar-brand {
 
 .wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .ordering-plan {
   padding: 1rem 0;
+}
+
+.wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .continue-plan {
+  padding: 0rem 0 0.9rem;
+  border-bottom: 0.063rem solid #d5dfff;
+}
+
+@media (min-width: 768px) {
+  .wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .continue-plan {
+    padding: 0;
+    border-bottom: 0;
+  }
 }
 
 .wrap main .middle-content .plans-section .plans-section__wrapper .plans-section__inner .section_column .button-wrapper button {
